@@ -3,6 +3,7 @@
 :root {
     --border: solid 1px #cbcbcb;
     --shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    --accent: #1b81e5;
 }
 
 * {
@@ -65,18 +66,20 @@ html {
 }
 
 #div-with-a {
-    background-color: #1b81e5;
     display: block;
     width: max-content;
     margin-left: auto;
-    padding: 0.3rem;
-    border-radius: 0.3rem;
 }
 
 #div-with-a #newGame,
 #div-with-a #newGame:visited {
-    text-decoration: none;
+    background-color: var(--accent);
     color: white;
+    text-decoration: none;
+    padding: 0.3rem;
+    border: solid 1px var(--accent);
+    border-radius: 0.3rem;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
 
 /*
@@ -99,6 +102,18 @@ html {
     border: solid 1px darkgray;
 }
 
+/*
+ * Aside
+ */
+
+aside img {
+    width: 100%;
+}
+
+/*
+ * Responsive
+ */
+
 @media only screen and (max-width: 414px) {
     aside {
         display: none;
@@ -114,10 +129,6 @@ html {
         width: 30%;
     }
 
-    aside img {
-        width: 100%;
-    }
-
     main {
         width: 50%;
     }
@@ -125,5 +136,34 @@ html {
     #game-area td {
         width: 125px;
         height: 125px;
+    }
+}
+
+@media only screen and (min-width: 1181px) {
+    html {
+        font-size: 22px;
+    }
+
+    main {
+        width: 70%;
+    }
+
+    aside {
+        width: 300px;
+    }
+
+    #div-with-a #newGame:hover {
+        background-color: white;
+        color: var(--accent);
+    }
+
+    #game-area td {
+        width: 200px;
+        height: 200px;
+    }
+
+    .col {
+        width: 49%;
+        display: inline-block;
     }
 }
