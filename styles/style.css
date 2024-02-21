@@ -2,7 +2,7 @@
 
 :root {
     --border: solid 1px #cbcbcb;
-        --shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    --shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -83,6 +83,11 @@ html {
  * Table
  */
 
+#game-area {
+    width: max-content;
+    margin: auto;
+}
+
 #game-area table {
     border-spacing: 0;
 }
@@ -92,11 +97,33 @@ html {
     width: 125px;
     font-size: 50px;
     border: solid 1px darkgray;
-    /* background-color: red; */
 }
 
 @media only screen and (max-width: 414px) {
     aside {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1181px) {
+    html {
+        font-size: 18px;
+    }
+
+    aside {
+        width: 30%;
+    }
+
+    aside img {
+        width: 100%;
+    }
+
+    main {
+        width: 50%;
+    }
+
+    #game-area td {
+        width: 125px;
+        height: 125px;
     }
 }
