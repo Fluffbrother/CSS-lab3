@@ -115,6 +115,10 @@ aside img {
  */
 
 @media only screen and (max-width: 414px) {
+    html {
+        overflow: visible;
+    }
+
     aside {
         display: none;
     }
@@ -152,6 +156,10 @@ aside img {
         width: 300px;
     }
 
+    #div-with-a {
+        display: inline-block;
+    }
+
     #div-with-a #newGame:hover {
         background-color: white;
         color: var(--accent);
@@ -164,6 +172,7 @@ aside img {
 
     .col {
         width: 49%;
+        padding: 2%;
         display: inline-block;
     }
 }
